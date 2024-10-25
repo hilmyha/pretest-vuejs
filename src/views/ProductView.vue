@@ -17,14 +17,11 @@ import { useProductStore } from "../stores/productStore";
 const productStore = useProductStore();
 const selectedProduct = ref(null);
 
-// Reset selected product to null
 const resetProduct = () => {
   selectedProduct.value = null;
 };
 
-// Set the selected product for editing
 const editProduct = (product) => {
-  console.log("Selected product for editing:", product.id);
   selectedProduct.value = product;
 };
 </script>

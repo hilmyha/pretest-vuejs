@@ -18,7 +18,6 @@ export const useQuoteStore = defineStore("quote", {
       this.loading = true;
       const response = await axios.get("https://dummyjson.com/quotes/random");
       this.quotes = response.data;
-      console.log(this.quotes);
       
       this.loading = false;
     },

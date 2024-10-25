@@ -20,7 +20,6 @@ export const useProductStore = defineStore("product", {
     async fetchProducts() {
       this.loading = true;
       const response = await axios.get("https://dummyjson.com/products");
-      console.log("response", response.data.products);
       this.products = response.data.products;
       this.loading = false;
     },
@@ -36,7 +35,9 @@ export const useProductStore = defineStore("product", {
         `https://dummyjson.com/products/${updatedProduct!.id}`,
         updatedProduct
       );
-      const index = this.products.findIndex((product) => product.id === updatedProduct.id);
+      const index = this.products.findIndex(
+        (product) => product.id === updatedProduct.id
+      );
       if (index !== -1) {
         this.products[index] = updatedProduct;
       }

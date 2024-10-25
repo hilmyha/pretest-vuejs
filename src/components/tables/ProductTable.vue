@@ -65,7 +65,6 @@ const productStore = useProductStore();
 const emit = defineEmits();
 
 const editProduct = (product) => {
-  // console.log("Edit product:", product);
   emit("edit", product);
 };
 

@@ -1,13 +1,3 @@
-<script setup>
-import {
-  FwbNavbar,
-  FwbNavbarCollapse,
-  FwbNavbarLink,
-  FwbNavbarLogo,
-} from "flowbite-vue";
-import { ref } from "vue";
-</script>
-
 <template>
   <div class="p-4 bg-[white] shadow-sm border-b z-50 sticky top-0">
     <div class="flex justify-between items-center">
@@ -17,3 +7,13 @@ import { ref } from "vue";
     </div>
   </div>
 </template>
+
+<script setup>
+import {
+  FwbNavbar,
+  FwbNavbarCollapse,
+  FwbNavbarLink,
+  FwbNavbarLogo,
+} from "flowbite-vue";
+import { ref } from "vue";
+</script>

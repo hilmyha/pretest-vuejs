@@ -17,12 +17,10 @@ import { useUserStore } from "../stores/userStore";
 const userStore = useUserStore();
 const selectedUser = ref(null);
 
-// Reset selected user to null
 const resetUser = () => {
   selectedUser.value = null;
 };
 
-// Set the selected user for editing
 const editUser = (user) => {
   selectedUser.value = user;
 };

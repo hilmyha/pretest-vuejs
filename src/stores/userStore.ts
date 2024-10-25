@@ -44,10 +44,10 @@ export const useUserStore = defineStore("user", {
       this.users = this.users.filter((user) => user.id !== userId);
     },
     async fetchUserById(userId: number) {
-      this.loading = true; // Set loading state
+      this.loading = true;
       const response = await axios.get(`https://dummyjson.com/users/${userId}`);
-      this.selectedUser = response.data; // Simpan pengguna yang dipilih
-      this.loading = false; // Reset loading state
+      this.selectedUser = response.data;
+      this.loading = false;
     },
   },
 });

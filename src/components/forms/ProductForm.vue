@@ -98,7 +98,6 @@ const product = ref({
 watch(
   () => props.product,
   (newVal) => {
-    console.log("New product received:", newVal); // Debugging
     if (newVal) {
       product.value = { ...newVal };
     } else {
