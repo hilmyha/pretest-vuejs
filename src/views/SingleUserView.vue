@@ -5,9 +5,6 @@
       {{ userStore.selectedUser?.lastName }}
     </h2>
     <p>Email: {{ userStore.selectedUser?.email }}</p>
-    <button @click="goBack" class="bg-blue-500 text-white px-4 py-2 rounded">
-      Go Back
-    </button>
   </div>
 </template>
 
@@ -25,8 +22,4 @@ const userId = Number(route.params.id);
 onMounted(async () => {
   await userStore.fetchUserById(userId);
 });
-
-const goBack = () => {
-  router.go(-1);
-};
 </script>
